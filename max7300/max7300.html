@@ -1,0 +1,234 @@
+<script type="text/javascript">
+//Define Pins
+/*{
+    "0": {
+        "name": {"P0.0"},
+    }
+}*/
+</script>
+
+<!-- setting-up mode for max7300 -->
+
+<script type="text/javascript">
+    RED.nodes.registerType('max7300mode',{
+        category: 'GPIO',
+        color: '#AFFE00',
+        defaults: {
+            name: {value:""},
+            mode: {value:"0",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            if(this.mode == 0)
+            {
+                return this.name||"max7300modeSet";
+            }
+            else
+            {
+                return this.name||"max7300modeGet";
+            }
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="max7300mode">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-mode"><i class="icon-tag"></i> Mode</label>
+        <select type="text" id="node-input-mode">
+            <option value="0">Set-Mode</option>
+            <option value="1">Get-Mode</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="max7300mode">
+    <p>A node to handle the max7300-Mode</p>
+</script>
+
+<!-- setting-up max7300 -->
+
+<script type="text/javascript">
+    RED.nodes.registerType('max7300States',{
+        category: 'GPIO',
+        color: '#AFFE00',
+        defaults: {
+            name: {value:""},
+            pin: {value:"0",required:true},
+            mode: {value:"0",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            if(this.mode == 0)
+            {
+                return this.name||"PINset: "+this.pin||"max7300States";
+            }
+            else
+            {
+                return this.name||"PINget: "+this.pin||"max7300States";
+            }
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="max7300States">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-pin"><i class="icon-tag"></i> Pin</label>
+        <select type="text" id="node-input-pin">
+            <option value="0">P0.0</option>
+            <option value="1">P0.1</option>
+            <option value="2">P0.2</option>
+            <option value="3">P0.3</option>
+            <option value="4">P0.4</option>
+            <option value="5">P0.5</option>
+            <option value="6">P0.6</option>
+            <option value="7">P0.7</option>
+            <option value="8">P1.0</option>
+            <option value="9">P1.1</option>
+            <option value="10">P1.2</option>
+            <option value="11">P1.3</option>
+            <option value="12">P1.4</option>
+            <option value="13">P1.5</option>
+            <option value="14">P1.6</option>
+            <option value="15">P1.7</option>
+            <option value="16">P2.0</option>
+            <option value="17">P2.1</option>
+            <option value="18">P2.2</option>
+            <option value="19">P2.3</option>
+            <option value="20">P2.4</option>
+            <option value="21">P2.5</option>
+            <option value="22">P2.6</option>
+            <option value="23">P2.7</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-mode"><i class="icon-tag"></i> Mode</label>
+        <select type="text" id="node-input-mode">
+            <option value="0">Set</option>
+            <option value="1">Get</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="max7300States">
+    <p>A node to handle the max7300</p>
+</script>
+
+
+<!-- conf max7300 -->
+
+<script type="text/javascript">
+    RED.nodes.registerType('max7300ConfigPin',{
+        category: 'GPIO',
+        color: '#AFFE00',
+        defaults: {
+            name: {value:""},
+            pin: {value:"0",required:true},
+            mode: {value:"0",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            if(this.mode == 0)
+            {
+                return this.name||"PINConfset: "+this.pin||"max7300States";
+            }
+            else
+            {
+                return this.name||"PINConfget: "+this.pin||"max7300States";
+            }
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="max7300ConfigPin">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-pin"><i class="icon-tag"></i> Pin</label>
+        <select type="text" id="node-input-pin">
+            <option value="0">P0.0</option>
+            <option value="1">P0.1</option>
+            <option value="2">P0.2</option>
+            <option value="3">P0.3</option>
+            <option value="4">P0.4</option>
+            <option value="5">P0.5</option>
+            <option value="6">P0.6</option>
+            <option value="7">P0.7</option>
+            <option value="8">P1.0</option>
+            <option value="9">P1.1</option>
+            <option value="10">P1.2</option>
+            <option value="11">P1.3</option>
+            <option value="12">P1.4</option>
+            <option value="13">P1.5</option>
+            <option value="14">P1.6</option>
+            <option value="15">P1.7</option>
+            <option value="16">P2.0</option>
+            <option value="17">P2.1</option>
+            <option value="18">P2.2</option>
+            <option value="19">P2.3</option>
+            <option value="20">P2.4</option>
+            <option value="21">P2.5</option>
+            <option value="22">P2.6</option>
+            <option value="23">P2.7</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-mode"><i class="icon-tag"></i> Mode</label>
+        <select type="text" id="node-input-mode">
+            <option value="0">Set</option>
+            <option value="1">Get</option>
+        </select>
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="max7300ConfigPin">
+    <p>A node to handle the max7300</p>
+</script>
+
+<!-- init max7300 -->
+
+<script type="text/javascript">
+    RED.nodes.registerType('max7300init',{
+        category: 'GPIO',
+        color: '#AFFE00',
+        defaults: {
+            name: {value:""},
+        },
+        inputs:1,
+        outputs:0,
+        icon: "light.png",
+        label: function() {
+            return this.name||"max7300init";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="max7300init">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="max7300init">
+    <p>A node to handle the max7300-Mode</p>
+</script>

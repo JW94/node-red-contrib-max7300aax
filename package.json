@@ -1,0 +1,13 @@
+{
+    "name"         : "node-red-contrib-max7300",
+    "version"      : "0.0.1",
+    "description"  : "A sample node for node-red",
+    "dependencies": {
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "sample": "max7300/max7300.js"
+        }
+    }
+}
