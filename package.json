@@ -1,13 +1,30 @@
 {
-    "name"         : "node-red-contrib-max7300",
-    "version"      : "0.0.1",
-    "description"  : "A sample node for node-red",
-    "dependencies": {
-    },
-    "keywords": [ "node-red" ],
-    "node-red"     : {
-        "nodes": {
-            "sample": "max7300/max7300.js"
-        }
+  "name": "node-red-contrib-max7300aax",
+  "version": "1.0.1",
+  "description": "Module to controle the max7300aax",
+  "keywords": [
+    "max7300aax",
+    "node-red"
+  ],
+  "author": "Jonathan Weinert <jo.weinert@h2o-protec.de>",
+  "license": "MIT",
+  "node-red"     : {
+    "nodes": {
+        "max7300aax": "max7300/max7300.js"
     }
+  },
+  "dependencies": {
+    "i2c": ">= 0.2.3",
+    "max7300aax": ">= 1.0.1"
+  },
+  "engines": {
+    "node": ">=4.6.1"
+  },
+  "bugs": {
+    "url": "https://github.com/JW94/node-red-contrib-max7300aax/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JW94/node-red-contrib-max7300aax"
+  }
 }
