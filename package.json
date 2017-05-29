@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-max7300aax",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module to controle the max7300aax",
   "keywords": [
     "max7300aax",
